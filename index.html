@@ -18,6 +18,23 @@
                 <div class="time" id="time">00:00:00</div>
                 <div class="date" id="date">2024年1月1日 星期一</div>
             </div>
+            <!-- 心情紀錄區塊 -->
+            <div class="mood-section">
+                <h3 class="mood-title">心情紀錄 💚</h3>
+                <div class="mood-input-container">
+                    <input 
+                        type="text" 
+                        id="moodInput" 
+                        class="mood-input" 
+                        placeholder="記錄今天的心情..."
+                        onkeypress="if(event.key === 'Enter') addMood()"
+                    >
+                    <button class="mood-add-btn" onclick="addMood()">記錄</button>
+                </div>
+                <div class="mood-history" id="moodHistory">
+                    <!-- 心情紀錄會動態加入這裡 -->
+                </div>
+            </div>
         </div>
 
         <!-- 名言區塊 -->

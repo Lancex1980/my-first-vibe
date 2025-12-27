@@ -97,6 +97,88 @@ function saveTodos() {
 // 頁面載入時執行
 loadTodos();
 
+// 心情紀錄功能
+let moods = JSON.parse(localStorage.getItem('moods')) || [];
+
+// 從本地儲存載入心情紀錄
+function loadMoods() {
+    const moodHistory = document.getElementById('moodHistory');
+    moodHistory.innerHTML = '';
+    
+    if (moods.length === 0) {
+        moodHistory.innerHTML = '<div style="color: rgba(255, 255, 255, 0.4); text-align: center; padding: 20px; font-size: 0.9rem;">還沒有心情紀錄</div>';
+        return;
+    }
+    
+    // 按日期倒序排列（最新的在前）
+    const sortedMoods = [...moods].sort((a, b) => new Date(b.date) - new Date(a.date));
+    
+    sortedMoods.forEach((mood, index) => {
+        const moodItem = document.createElement('div');
+        moodItem.className = 'mood-item';
+        
+        const originalIndex = moods.findIndex(m => m.date === mood.date && m.text === mood.text);
+        
+        moodItem.innerHTML = `
+            <div class="mood-text">${mood.text}</div>
+            <div class="mood-date">${formatMoodDate(mood.date)}</div>
+            <button class="mood-delete-btn" onclick="deleteMood(${originalIndex})">刪除</button>
+        `;
+        
+        moodHistory.appendChild(moodItem);
+    });
+}
+
+// 格式化心情日期
+function formatMoodDate(dateString) {
+    const date = new Date(dateString);
+    const year = date.getFullYear();
+    const month = date.getMonth() + 1;
+    const day = date.getDate();
+    const hours = String(date.getHours()).padStart(2, '0');
+    const minutes = String(date.getMinutes()).padStart(2, '0');
+    return `${year}/${month}/${day} ${hours}:${minutes}`;
+}
+
+// 新增心情紀錄
+function addMood() {
+    const input = document.getElementById('moodInput');
+    const text = input.value.trim();
+    
+    if (text === '') {
+        alert('請輸入心情！');
+        return;
+    }
+    
+    const now = new Date();
+    moods.push({
+        text: text,
+        date: now.toISOString()
+    });
+    
+    saveMoods();
+    loadMoods();
+    input.value = '';
+    input.focus();
+}
+
+// 刪除心情紀錄
+function deleteMood(index) {
+    if (confirm('確定要刪除這個心情紀錄嗎？')) {
+        moods.splice(index, 1);
+        saveMoods();
+        loadMoods();
+    }
+}
+
+// 儲存到本地儲存
+function saveMoods() {
+    localStorage.setItem('moods', JSON.stringify(moods));
+}
+
+// 頁面載入時執行
+loadMoods();
+
 // 背景顏色切換功能
 const themes = [
     { name: 'theme-cyberpunk', label: '賽博龐克' },
