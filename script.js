@@ -378,13 +378,12 @@ document.addEventListener('DOMContentLoaded', function() {
     loadTodos();
     loadMoods();
     fetchWeather(); // 載入天氣資料
-    loadQuotes(); // 載入名言資料
     
     // 載入儲存的主題
     const body = document.getElementById('body');
     body.classList.add(themes[currentThemeIndex].name);
     
-    // 載入名言資料
+    // 載入名言資料（最後載入，確保 DOM 已準備好）
     loadQuotes();
     
     // 初始化拖放功能
@@ -500,6 +499,127 @@ function toggleBackground() {
     
     // 儲存當前主題
     localStorage.setItem('themeIndex', currentThemeIndex);
+}
+
+// 名言輪播功能
+let quotes = [];
+let currentQuoteIndex = 0;
+let quoteInterval = null;
+
+// 載入名言資料
+async function loadQuotes() {
+    const quoteText = document.getElementById('quote');
+    const quoteAuthor = document.getElementById('quoteAuthor');
+    const quoteTitle = document.getElementById('quoteTitle');
+    
+    if (!quoteText || !quoteAuthor) {
+        console.error('找不到名言元素');
+        return;
+    }
+    
+    try {
+        console.log('開始載入名言資料...');
+        const response = await fetch('ai_leaders_quotes_100.json');
+        
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        
+        quotes = await response.json();
+        console.log(`成功載入 ${quotes.length} 條名言`);
+        
+        // 如果載入成功，開始輪播
+        if (quotes.length > 0) {
+            displayQuote(0);
+            startQuoteRotation();
+        } else {
+            throw new Error('名言資料為空');
+        }
+    } catch (error) {
+        console.error('載入名言失敗:', error);
+        // 如果載入失敗，顯示預設名言
+        if (quoteText) quoteText.textContent = '「成功不是終點，失敗也不是致命的，繼續前進的勇氣才是最重要的。」';
+        if (quoteAuthor) quoteAuthor.textContent = '— 溫斯頓·邱吉爾';
+        if (quoteTitle) quoteTitle.textContent = '';
+    }
+}
+
+// 顯示名言
+function displayQuote(index) {
+    if (quotes.length === 0) {
+        console.warn('名言陣列為空');
+        return;
+    }
+    
+    if (index < 0 || index >= quotes.length) {
+        console.warn(`索引 ${index} 超出範圍`);
+        return;
+    }
+    
+    const quote = quotes[index];
+    const quoteTextEl = document.getElementById('quote');
+    const quoteAuthorEl = document.getElementById('quoteAuthor');
+    const quoteTitleEl = document.getElementById('quoteTitle');
+    
+    if (!quoteTextEl || !quoteAuthorEl) {
+        console.error('找不到名言元素');
+        return;
+    }
+    
+    console.log(`顯示第 ${index + 1} 條名言: ${quote.author}`);
+    
+    // 淡出動畫
+    quoteTextEl.classList.add('fade-out');
+    quoteAuthorEl.classList.add('fade-out');
+    if (quoteTitleEl) quoteTitleEl.classList.add('fade-out');
+    
+    // 等待淡出完成後更新內容
+    setTimeout(() => {
+        quoteTextEl.textContent = `「${quote.quote_zh}」`;
+        quoteAuthorEl.textContent = `— ${quote.author}`;
+        if (quoteTitleEl && quote.title_zh) {
+            quoteTitleEl.textContent = quote.title_zh;
+        }
+        
+        // 淡入動畫
+        quoteTextEl.classList.remove('fade-out');
+        quoteTextEl.classList.add('fade-in');
+        quoteAuthorEl.classList.remove('fade-out');
+        quoteAuthorEl.classList.add('fade-in');
+        if (quoteTitleEl) {
+            quoteTitleEl.classList.remove('fade-out');
+            quoteTitleEl.classList.add('fade-in');
+        }
+        
+        // 移除淡入類別（為下次淡出做準備）
+        setTimeout(() => {
+            quoteTextEl.classList.remove('fade-in');
+            quoteAuthorEl.classList.remove('fade-in');
+            if (quoteTitleEl) quoteTitleEl.classList.remove('fade-in');
+        }, 500);
+    }, 500);
+}
+
+// 開始輪播
+function startQuoteRotation() {
+    // 清除現有的間隔
+    if (quoteInterval) {
+        clearInterval(quoteInterval);
+    }
+    
+    // 每20秒切換一次
+    quoteInterval = setInterval(() => {
+        currentQuoteIndex = (currentQuoteIndex + 1) % quotes.length;
+        displayQuote(currentQuoteIndex);
+    }, 20000); // 20000 毫秒 = 20 秒
+}
+
+// 停止輪播
+function stopQuoteRotation() {
+    if (quoteInterval) {
+        clearInterval(quoteInterval);
+        quoteInterval = null;
+    }
 }
 
 
