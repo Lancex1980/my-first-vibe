@@ -12,28 +12,60 @@
 <body id="body">
     <button class="theme-toggle-btn" onclick="toggleBackground()" title="切換背景顏色">🎨</button>
     <div class="container">
+        <!-- 天氣卡片 -->
+        <div class="card weather-card" id="weatherCard">
+            <div class="weather-header">
+                <h2 class="weather-title">即時天氣 🌡️</h2>
+                <div class="weather-location">📍 台北</div>
+            </div>
+            
+            <!-- Loading 狀態 -->
+            <div class="weather-loading" id="weatherLoading">
+                <div class="loading-spinner"></div>
+                <p>載入天氣資料中...</p>
+            </div>
+            
+            <!-- Error 狀態 -->
+            <div class="weather-error" id="weatherError" style="display: none;">
+                <p>⚠️ 無法載入天氣資料</p>
+                <button class="weather-retry-btn" onclick="fetchWeather()">重試</button>
+            </div>
+            
+            <!-- 天氣內容 -->
+            <div class="weather-content" id="weatherContent" style="display: none;">
+                <div class="weather-main">
+                    <div class="weather-icon" id="weatherIcon">☀️</div>
+                    <div class="weather-temp">
+                        <span class="temp-value" id="temperature">--</span>
+                        <span class="temp-unit">°C</span>
+                    </div>
+                    <div class="weather-status" id="weatherStatus">--</div>
+                </div>
+                
+                <div class="weather-details">
+                    <div class="weather-detail-item">
+                        <span class="detail-label">體感溫度</span>
+                        <span class="detail-value" id="apparentTemp">--°C</span>
+                    </div>
+                    <div class="weather-detail-item">
+                        <span class="detail-label">降雨機率</span>
+                        <span class="detail-value" id="precipitation">--%</span>
+                    </div>
+                    <div class="weather-detail-item">
+                        <span class="detail-label">風速</span>
+                        <span class="detail-value" id="windspeed">-- km/h</span>
+                    </div>
+                </div>
+                
+                <div class="weather-update-time" id="updateTime"></div>
+            </div>
+        </div>
+        
         <!-- 時鐘區塊 -->
         <div class="card clock-card">
             <div class="clock">
                 <div class="time" id="time">00:00:00</div>
                 <div class="date" id="date">2024年1月1日 星期一</div>
-            </div>
-            <!-- 心情紀錄區塊 -->
-            <div class="mood-section">
-                <h3 class="mood-title">心情紀錄 💚</h3>
-                <div class="mood-input-container">
-                    <input 
-                        type="text" 
-                        id="moodInput" 
-                        class="mood-input" 
-                        placeholder="記錄今天的心情..."
-                        onkeypress="if(event.key === 'Enter') addMood()"
-                    >
-                    <button class="mood-add-btn" onclick="addMood()">記錄</button>
-                </div>
-                <div class="mood-history" id="moodHistory">
-                    <!-- 心情紀錄會動態加入這裡 -->
-                </div>
             </div>
         </div>
 
@@ -60,6 +92,24 @@
             <ul class="todo-list" id="todoList">
                 <!-- 待辦事項會動態加入這裡 -->
             </ul>
+        </div>
+
+        <!-- 心情紀錄區塊 -->
+        <div class="card mood-card">
+            <h2 class="card-title">心情紀錄區 💚</h2>
+            <div class="mood-input-container">
+                <input 
+                    type="text" 
+                    id="moodInput" 
+                    class="mood-input" 
+                    placeholder="寫下今天的感想..."
+                    onkeypress="if(event.key === 'Enter') addMood()"
+                >
+                <button class="mood-add-btn" onclick="addMood()">記錄</button>
+            </div>
+            <div class="mood-history" id="moodHistory">
+                <!-- 心情紀錄會動態加入這裡 -->
+            </div>
         </div>
     </div>
 

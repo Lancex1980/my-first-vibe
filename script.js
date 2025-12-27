@@ -25,6 +25,88 @@ function updateClock() {
 setInterval(updateClock, 1000);
 updateClock(); // 立即執行一次
 
+// 天氣功能
+const WEATHER_API_URL = 'https://api.open-meteo.com/v1/forecast?latitude=25.0330&longitude=121.5654&current=temperature_2m,apparent_temperature,precipitation_probability,windspeed_10m,weather_code&timezone=Asia/Taipei';
+
+// 天氣代碼對應表
+const weatherCodeMap = {
+    0: { icon: '☀️', text: '晴天' },
+    1: { icon: '🌤️', text: '大部分晴朗' },
+    2: { icon: '⛅', text: '部分多雲' },
+    3: { icon: '☁️', text: '多雲' },
+    45: { icon: '🌫️', text: '霧' },
+    48: { icon: '🌫️', text: '結霜霧' },
+    51: { icon: '🌦️', text: '輕微毛毛雨' },
+    53: { icon: '🌦️', text: '中等毛毛雨' },
+    55: { icon: '🌦️', text: '濃密毛毛雨' },
+    61: { icon: '🌧️', text: '小雨' },
+    63: { icon: '🌧️', text: '中雨' },
+    65: { icon: '🌧️', text: '大雨' },
+    71: { icon: '🌨️', text: '小雪' },
+    73: { icon: '🌨️', text: '中雪' },
+    75: { icon: '🌨️', text: '大雪' },
+    80: { icon: '🌦️', text: '輕微陣雨' },
+    81: { icon: '🌦️', text: '中等陣雨' },
+    82: { icon: '🌦️', text: '強烈陣雨' },
+    95: { icon: '⛈️', text: '雷雨' },
+    96: { icon: '⛈️', text: '雷雨帶冰雹' },
+    99: { icon: '⛈️', text: '強烈雷雨帶冰雹' }
+};
+
+// 取得天氣資料
+async function fetchWeather() {
+    const loadingEl = document.getElementById('weatherLoading');
+    const errorEl = document.getElementById('weatherError');
+    const contentEl = document.getElementById('weatherContent');
+    
+    // 顯示 loading 狀態
+    loadingEl.style.display = 'block';
+    errorEl.style.display = 'none';
+    contentEl.style.display = 'none';
+    
+    try {
+        const response = await fetch(WEATHER_API_URL);
+        
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        
+        const data = await response.json();
+        const current = data.current;
+        
+        // 更新天氣資料
+        document.getElementById('temperature').textContent = Math.round(current.temperature_2m);
+        document.getElementById('apparentTemp').textContent = `${Math.round(current.apparent_temperature)}°C`;
+        document.getElementById('precipitation').textContent = `${current.precipitation_probability}%`;
+        document.getElementById('windspeed').textContent = `${Math.round(current.windspeed_10m)} km/h`;
+        
+        // 更新天氣狀態
+        const weatherInfo = weatherCodeMap[current.weather_code] || { icon: '🌤️', text: '未知' };
+        document.getElementById('weatherIcon').textContent = weatherInfo.icon;
+        document.getElementById('weatherStatus').textContent = weatherInfo.text;
+        
+        // 更新時間
+        const updateTime = new Date();
+        const timeString = updateTime.toLocaleTimeString('zh-TW', { hour: '2-digit', minute: '2-digit' });
+        document.getElementById('updateTime').textContent = `最後更新：${timeString}`;
+        
+        // 顯示內容，隱藏 loading
+        loadingEl.style.display = 'none';
+        contentEl.style.display = 'block';
+        
+    } catch (error) {
+        console.error('天氣資料載入失敗:', error);
+        
+        // 顯示錯誤狀態
+        loadingEl.style.display = 'none';
+        errorEl.style.display = 'block';
+    }
+}
+
+// 每 10 分鐘更新一次天氣（600000 毫秒）
+setInterval(fetchWeather, 600000);
+
+
 // 待辦清單功能
 let todos = JSON.parse(localStorage.getItem('todos')) || [];
 
@@ -94,8 +176,16 @@ function saveTodos() {
     localStorage.setItem('todos', JSON.stringify(todos));
 }
 
-// 頁面載入時執行
-loadTodos();
+// 頁面載入時執行 - 確保 DOM 已載入
+document.addEventListener('DOMContentLoaded', function() {
+    loadTodos();
+    loadMoods();
+    fetchWeather(); // 載入天氣資料
+    
+    // 載入儲存的主題
+    const body = document.getElementById('body');
+    body.classList.add(themes[currentThemeIndex].name);
+});
 
 // 心情紀錄功能
 let moods = JSON.parse(localStorage.getItem('moods')) || [];
@@ -176,9 +266,6 @@ function saveMoods() {
     localStorage.setItem('moods', JSON.stringify(moods));
 }
 
-// 頁面載入時執行
-loadMoods();
-
 // 背景顏色切換功能
 const themes = [
     { name: 'theme-cyberpunk', label: '賽博龐克' },
@@ -206,9 +293,4 @@ function toggleBackground() {
     localStorage.setItem('themeIndex', currentThemeIndex);
 }
 
-// 載入儲存的主題
-window.addEventListener('DOMContentLoaded', () => {
-    const body = document.getElementById('body');
-    body.classList.add(themes[currentThemeIndex].name);
-});
 
