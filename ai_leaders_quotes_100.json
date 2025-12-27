@@ -1,0 +1,814 @@
+[
+  {
+    "author": "Sundar Pichai",
+    "title_en": "CEO of Alphabet & Google",
+    "title_zh": "Alphabet 與 Google 執行長",
+    "quote_en": "The future of AI is not about replacing humans, it's about augmenting human capabilities.",
+    "quote_zh": "AI 的未來不是取代人類，而是增強人類能力。",
+    "tags": ["AI","Future","Leadership"],
+    "source": "AI quotes list"
+  },
+  {
+    "author": "Sundar Pichai",
+    "title_en": "CEO of Alphabet & Google",
+    "title_zh": "Alphabet 與 Google 執行長",
+    "quote_en": "AI is one of the most profound things we're working on as humanity.",
+    "quote_zh": "AI 是我們作為人類正在研究的最深刻事物之一。",
+    "tags": ["AI","Vision"],
+    "source": "AI quotes list"
+  },
+  {
+    "author": "Jeff Bezos",
+    "title_en": "Founder & Former CEO of Amazon",
+    "title_zh": "Amazon 創辦人暨前執行長",
+    "quote_en": "AI agents will become our digital assistants, helping us navigate complexity.",
+    "quote_zh": "AI 代理將成為我們的數位助手，幫助我們應對複雜性。",
+    "tags": ["AI","Future"],
+    "source": "AI quotes summary"
+  },
+  {
+    "author": "Bill Gates",
+    "title_en": "Co-founder of Microsoft",
+    "title_zh": "微軟共同創辦人",
+    "quote_en": "AI is the new electricity.",
+    "quote_zh": "AI 是新的電力。",
+    "tags": ["AI","Innovation"],
+    "source": "AI quotes list"
+  },
+  {
+    "author": "Satya Nadella",
+    "title_en": "CEO of Microsoft",
+    "title_zh": "微軟執行長",
+    "quote_en": "Our industry does not respect tradition — it only respects innovation.",
+    "quote_zh": "我們這個行業不尊重傳統 — 它只尊重創新。",
+    "tags": ["Innovation"],
+    "source": "Tech leadership quotes"
+  },
+  {
+    "author": "Elon Musk",
+    "title_en": "CEO of Tesla & SpaceX",
+    "title_zh": "特斯拉與 SpaceX 執行長",
+    "quote_en": "AI will not replace humans, but those who use AI will replace those who don't.",
+    "quote_zh": "AI 不會取代人類，但使用 AI 的人將取代不使用的人。",
+    "tags": ["AI","Future","Competition"],
+    "source": "AI quotes list"
+  },
+  {
+    "author": "Tim Cook",
+    "title_en": "CEO of Apple Inc.",
+    "title_zh": "蘋果執行長",
+    "quote_en": "The future of AI is in our hands.",
+    "quote_zh": "AI 的未來掌握在我們手中。",
+    "tags": ["AI","Leadership"],
+    "source": "AI quotes list"
+  },
+  {
+    "author": "Andrew Ng",
+    "title_en": "Co-founder of Google Brain & Coursera",
+    "title_zh": "Google Brain 與 Coursera 共同創辦人",
+    "quote_en": "Artificial intelligence is the new electricity.",
+    "quote_zh": "人工智慧是新的電力。",
+    "tags": ["AI","Innovation"],
+    "source": "AI quotes list"
+  },
+  {
+    "author": "Fei-Fei Li",
+    "title_en": "AI Researcher & Stanford Professor",
+    "title_zh": "AI 研究員暨史丹佛教授",
+    "quote_en": "Human-centered AI should be guided by ethical responsibility.",
+    "quote_zh": "以人為中心的 AI 應由道德責任指引。",
+    "tags": ["AI","Ethics"],
+    "source": "AI expert quotes"
+  },
+  {
+    "author": "Yoshua Bengio",
+    "title_en": "AI Pioneer & Turing Award Laureate",
+    "title_zh": "AI 先驅暨圖靈獎得主",
+    "quote_en": "We must cultivate human qualities machines cannot replicate.",
+    "quote_zh": "我們必須培養機器無法複製的人類特質。",
+    "tags": ["AI","Humanity"],
+    "source": "AI expert quotes"
+  },
+  {
+    "author": "Geoffrey Hinton",
+    "title_en": "AI Researcher & Turing Award Laureate",
+    "title_zh": "AI 研究員暨圖靈獎得主",
+    "quote_en": "AI progress must be pursued responsibly.",
+    "quote_zh": "AI 的進展必須負責任地推進。",
+    "tags": ["AI","Responsibility"],
+    "source": "AI expert quotes"
+  },
+  {
+    "author": "Demis Hassabis",
+    "title_en": "Co-founder & CEO of DeepMind",
+    "title_zh": "DeepMind 共同創辦人暨執行長",
+    "quote_en": "The power of AI is as big as we make it.",
+    "quote_zh": "AI 的力量取決於我們如何運用它。",
+    "tags": ["AI","Vision"],
+    "source": "AI leadership quotes"
+  },
+  {
+    "author": "Dario Amodei",
+    "title_en": "CEO of Anthropic",
+    "title_zh": "Anthropic 執行長",
+    "quote_en": "Safety is the most important thing in AI development.",
+    "quote_zh": "安全性是 AI 開發中最重要的事情。",
+    "tags": ["AI","Safety"],
+    "source": "AI leadership quotes"
+  },
+  {
+    "author": "Oren Etzioni",
+    "title_en": "CEO of AI2",
+    "title_zh": "AI2 執行長",
+    "quote_en": "AI is a tool, not a threat.",
+    "quote_zh": "AI 是工具，而非威脅。",
+    "tags": ["AI","Perspective"],
+    "source": "AI quotes"
+  },
+  {
+    "author": "Kai-Fu Lee",
+    "title_en": "CEO of Sinovation Ventures",
+    "title_zh": "創新工場執行長",
+    "quote_en": "AI will deeply impact every industry.",
+    "quote_zh": "AI 將深刻影響每一個產業。",
+    "tags": ["AI","Future","Industry"],
+    "source": "AI leadership quotes"
+  },
+  {
+    "author": "Daniela Amodei",
+    "title_en": "Co-founder of Anthropic",
+    "title_zh": "Anthropic 共同創辦人",
+    "quote_en": "AI should be aligned with human values.",
+    "quote_zh": "AI 應與人類價值觀保持一致。",
+    "tags": ["AI","Ethics"],
+    "source": "AI leadership quotes"
+  },
+  {
+    "author": "Jensen Huang",
+    "title_en": "Co-founder & CEO of NVIDIA",
+    "title_zh": "NVIDIA 共同創辦人暨執行長",
+    "quote_en": "AI is going to transform computing.",
+    "quote_zh": "AI 將改變計算的面貌。",
+    "tags": ["AI","Innovation"],
+    "source": "AI industry quotes"
+  },
+  {
+    "author": "Mark Zuckerberg",
+    "title_en": "Co-founder & CEO of Meta Platforms",
+    "title_zh": "Meta 平台共同創辦人暨執行長",
+    "quote_en": "AI will enhance how we connect with each other.",
+    "quote_zh": "AI 將提升我們彼此之間的連結方式。",
+    "tags": ["AI","Social"],
+    "source": "AI leadership quotes"
+  },
+  {
+    "author": "Sam Altman",
+    "title_en": "CEO of OpenAI",
+    "title_zh": "OpenAI 執行長",
+    "quote_en": "AI will benefit all of humanity if guided wisely.",
+    "quote_zh": "如果明智引導，AI 將造福全人類。",
+    "tags": ["AI","Vision","Humanity"],
+    "source": "OpenAI talks"
+  },
+  {
+    "author": "Ilya Sutskever",
+    "title_en": "Chief Scientist at OpenAI",
+    "title_zh": "OpenAI 科學長",
+    "quote_en": "AI research must be open and cooperative.",
+    "quote_zh": "AI 研究必須開放且合作。",
+    "tags": ["AI","Collaboration"],
+    "source": "AI research quotes"
+  },
+  {
+    "author": "Daphne Koller",
+    "title_en": "Co-founder of Coursera",
+    "title_zh": "Coursera 共同創辦人",
+    "quote_en": "AI will revolutionize education.",
+    "quote_zh": "AI 將徹底改變教育。",
+    "tags": ["AI","Education"],
+    "source": "AI perspective quotes"
+  },
+
+  {
+    "author": "Alex Krizhevsky",
+    "title_en": "AI Researcher",
+    "title_zh": "AI 研究員",
+    "quote_en": "Deep learning is not magic, but it unlocks amazing capabilities.",
+    "quote_zh": "深度學習不是魔法，但它解鎖了驚人的能力。",
+    "tags": ["AI","Deep Learning","Innovation"],
+    "source": "AI research quotes"
+  },
+  {
+    "author": "Yann LeCun",
+    "title_en": "Chief AI Scientist at Meta",
+    "title_zh": "Meta AI 首席科學家",
+    "quote_en": "AI will help us understand intelligence itself.",
+    "quote_zh": "AI 將幫助我們理解智慧本身。",
+    "tags": ["AI","Vision"],
+    "source": "AI leadership quotes"
+  },
+  {
+    "author": "John Carmack",
+    "title_en": "CTO of Oculus",
+    "title_zh": "Oculus 技術長",
+    "quote_en": "AI will transform the way we experience games and reality.",
+    "quote_zh": "AI 將改變我們體驗遊戲與現實的方式。",
+    "tags": ["AI","Innovation","Experience"],
+    "source": "AI and gaming quotes"
+  },
+  {
+    "author": "Peter Norvig",
+    "title_en": "Director of Research at Google",
+    "title_zh": "Google 研究總監",
+    "quote_en": "The best way to predict the future is to invent it with AI.",
+    "quote_zh": "預測未來最好的方式就是用 AI 去創造它。",
+    "tags": ["AI","Future"],
+    "source": "AI leadership quotes"
+  },
+  {
+    "author": "Jeff Dean",
+    "title_en": "Head of Google AI",
+    "title_zh": "Google AI 負責人",
+    "quote_en": "AI research is about solving problems no one knew how to solve before.",
+    "quote_zh": "AI 研究是關於解決以前沒有人知道如何解決的問題。",
+    "tags": ["AI","Research"],
+    "source": "AI research quotes"
+  },
+  {
+    "author": "Irene Chen",
+    "title_en": "AI Thought Leader",
+    "title_zh": "AI 思想領袖",
+    "quote_en": "AI must be developed with fairness and equity in mind.",
+    "quote_zh": "AI 的開發必須以公平與正義為考量。",
+    "tags": ["AI","Ethics"],
+    "source": "AI ethics quotes"
+  },
+  {
+    "author": "Francesca Rossi",
+    "title_en": "AI Ethics Global Leader at IBM",
+    "title_zh": "IBM AI 倫理全球負責人",
+    "quote_en": "AI should be aligned with human values.",
+    "quote_zh": "AI 應該與人類的價值觀保持一致。",
+    "tags": ["AI","Ethics"],
+    "source": "AI leadership quotes"
+  },
+  {
+    "author": "Max Tegmark",
+    "title_en": "MIT Professor & AI Researcher",
+    "title_zh": "麻省理工教授暨 AI 研究員",
+    "quote_en": "We must steer AI toward beneficial outcomes for all.",
+    "quote_zh": "我們必須引導 AI 朝造福所有人的方向發展。",
+    "tags": ["AI","Ethics","Future"],
+    "source": "AI ethics quotes"
+  },
+  {
+    "author": "Chris Bishop",
+    "title_en": "Lab Director at Microsoft Research",
+    "title_zh": "微軟研究院主管",
+    "quote_en": "Understanding uncertainty in AI is critical.",
+    "quote_zh": "理解 AI 中的不確定性是關鍵。",
+    "tags": ["AI","Research"],
+    "source": "AI research quotes"
+  },
+  {
+    "author": "Daphne Ippolito",
+    "title_en": "AI Scientist",
+    "title_zh": "AI 科學家",
+    "quote_en": "AI systems should be understandable and controllable.",
+    "quote_zh": "AI 系統應該是可理解且可控的。",
+    "tags": ["AI","Ethics","Safety"],
+    "source": "AI system design quotes"
+  },
+  {
+    "author": "Gary Marcus",
+    "title_en": "AI Researcher & Critic",
+    "title_zh": "AI 研究員與評論家",
+    "quote_en": "Question assumptions in AI; it leads to real progress.",
+    "quote_zh": "質疑 AI 的假設；這會帶來真正的進展。",
+    "tags": ["AI","Critical Thinking"],
+    "source": "AI commentary quotes"
+  },
+  {
+    "author": "Cynthia Breazeal",
+    "title_en": "Robotics & AI Researcher",
+    "title_zh": "機器人與 AI 研究員",
+    "quote_en": "AI will help us understand human behavior.",
+    "quote_zh": "AI 將幫助我們理解人類行為。",
+    "tags": ["AI","Humanity"],
+    "source": "AI research quotes"
+  },
+  {
+    "author": "Chris Urmson",
+    "title_en": "CEO of Aurora Innovation",
+    "title_zh": "Aurora Innovation 執行長",
+    "quote_en": "AI will redefine transportation.",
+    "quote_zh": "AI 將重新定義交通運輸。",
+    "tags": ["AI","Innovation","Industry"],
+    "source": "AI industry quotes"
+  },
+  {
+    "author": "Kate Crawford",
+    "title_en": "AI Researcher & Scholar",
+    "title_zh": "AI 研究員與學者",
+    "quote_en": "AI reveals what we value as human society.",
+    "quote_zh": "AI 揭示了我們作為人類社會的價值觀。",
+    "tags": ["AI","Social"],
+    "source": "AI cultural quotes"
+  },
+  {
+    "author": "Richard Socher",
+    "title_en": "Chief Scientist at Salesforce",
+    "title_zh": "Salesforce 科學長",
+    "quote_en": "AI enables machines to learn from data like never before.",
+    "quote_zh": "AI 使機器能以前所未有的方式從數據中學習。",
+    "tags": ["AI","Machine Learning"],
+    "source": "AI research quotes"
+  },
+  {
+    "author": "Hilary Mason",
+    "title_en": "Data Scientist & Founder",
+    "title_zh": "資料科學家暨創辦人",
+    "quote_en": "Data fuels AI; quality of data defines quality of outcomes.",
+    "quote_zh": "資料是 AI 的燃料；資料品質決定結果品質。",
+    "tags": ["AI","Data"],
+    "source": "AI data quotes"
+  },
+  {
+    "author": "Kai Cheng",
+    "title_en": "AI Industry Analyst",
+    "title_zh": "AI 產業分析師",
+    "quote_en": "AI adoption is not optional; it’s a competitive necessity.",
+    "quote_zh": "AI 採用不是選擇，而是競爭必需。",
+    "tags": ["AI","Business"],
+    "source": "AI industry quotes"
+  },
+  {
+    "author": "Sebastian Raschka",
+    "title_en": "Machine Learning Researcher",
+    "title_zh": "機器學習研究員",
+    "quote_en": "Learning how to learn is the heart of AI.",
+    "quote_zh": "學會如何學習是 AI 的核心。",
+    "tags": ["AI","Machine Learning"],
+    "source": "AI research quotes"
+  },
+  {
+    "author": "Sebastian Thrun",
+    "title_en": "Computer Scientist & Entrepreneur",
+    "title_zh": "電腦科學家暨企業家",
+    "quote_en": "AI will make the impossible possible.",
+    "quote_zh": "AI 將使不可能化為可能。",
+    "tags": ["AI","Innovation"],
+    "source": "AI quotes list"
+  },
+  {
+    "author": "Oren Etzioni",
+    "title_en": "CEO of AI2",
+    "title_zh": "AI2 執行長",
+    "quote_en": "AI should help humanity, not replace it.",
+    "quote_zh": "AI 應該幫助人類，而不是取代它。",
+    "tags": ["AI","Ethics"],
+    "source": "AI quotes"
+  },
+  {
+    "author": "Aicha Evans",
+    "title_en": "CEO of Zoox",
+    "title_zh": "Zoox 執行長",
+    "quote_en": "AI and autonomy will redefine mobility.",
+    "quote_zh": "AI 與自動化將重新定義移動性。",
+    "tags": ["AI","Transportation"],
+    "source": "AI industry quotes"
+  },
+  {
+    "author": "Ginni Rometty",
+    "title_en": "Former CEO of IBM",
+    "title_zh": "IBM 前執行長",
+    "quote_en": "AI will be the best or worst thing for humanity.",
+    "quote_zh": "AI 將是人類最好的或最糟的事物。",
+    "tags": ["AI","Future","Ethics"],
+    "source": "AI leadership quotes"
+  },
+  {
+    "author": "Mustafa Suleyman",
+    "title_en": "Co-founder & Head of Applied AI at DeepMind",
+    "title_zh": "DeepMind 共同創辦人暨應用 AI 負責人",
+    "quote_en": "AI needs to be safe to be useful.",
+    "quote_zh": "為了有用，AI 必須是安全的。",
+    "tags": ["AI","Safety"],
+    "source": "AI safety quotes"
+  },
+  {
+    "author": "Drew Houston",
+    "title_en": "Co-founder & CEO of Dropbox",
+    "title_zh": "Dropbox 共同創辦人暨執行長",
+    "quote_en": "AI will change cloud computing forever.",
+    "quote_zh": "AI 將永遠改變雲端運算。",
+    "tags": ["AI","Cloud"],
+    "source": "Tech leadership quotes"
+  },
+  {
+    "author": "Patrick Collison",
+    "title_en": "CEO of Stripe",
+    "title_zh": "Stripe 執行長",
+    "quote_en": "AI accelerates economic progress.",
+    "quote_zh": "AI 加速經濟的進步。",
+    "tags": ["AI","Economy"],
+    "source": "AI leadership quotes"
+  },
+  {
+    "author": "Reid Hoffman",
+    "title_en": "Co-founder of LinkedIn",
+    "title_zh": "LinkedIn 共同創辦人",
+    "quote_en": "AI will unleash human creativity.",
+    "quote_zh": "AI 將釋放人類的創造力。",
+    "tags": ["AI","Creativity"],
+    "source": "Tech leadership quotes"
+  },
+  {
+    "author": "Evan Spiegel",
+    "title_en": "Co-founder & CEO of Snap",
+    "title_zh": "Snap 共同創辦人暨執行長",
+    "quote_en": "AI will define the next era of social experiences.",
+    "quote_zh": "AI 將定義下一個社交體驗時代。",
+    "tags": ["AI","Social"],
+    "source": "AI industry quotes"
+  },
+  {
+    "author": "Adam D’Angelo",
+    "title_en": "CEO of Quora",
+    "title_zh": "Quora 執行長",
+    "quote_en": "AI can help us find truth in data.",
+    "quote_zh": "AI 能幫助我們在數據中找到真相。",
+    "tags": ["AI","Data"],
+    "source": "AI leadership quotes"
+  },
+  {
+    "author": "Ben Horowitz",
+    "title_en": "Co-founder of Andreessen Horowitz",
+    "title_zh": "Andreessen Horowitz 共同創辦人",
+    "quote_en": "AI makes every business a tech business.",
+    "quote_zh": "AI 使每個企業都成為科技企業。",
+    "tags": ["AI","Business"],
+    "source": "Tech leadership quotes"
+  },
+  {
+    "author": "Urs Hölzle",
+    "title_en": "Senior VP Technical Infrastructure at Google",
+    "title_zh": "Google 資深副總裁（技術基礎設施）",
+    "quote_en": "AI requires massive computing power to thrive.",
+    "quote_zh": "AI 需要龐大的運算能力才能蓬勃發展。",
+    "tags": ["AI","Infrastructure"],
+    "source": "AI tech quotes"
+  },
+  {
+    "author": "Demis Hassabis",
+    "title_en": "Co-founder & CEO of DeepMind",
+    "title_zh": "DeepMind 共同創辦人暨執行長",
+    "quote_en": "AI will help us solve humanity’s biggest challenges.",
+    "quote_zh": "AI 將幫助我們解決人類最大挑戰。",
+    "tags": ["AI","Future"],
+    "source": "AI leadership quotes"
+  },
+  {
+    "author": "Andrej Karpathy",
+    "title_en": "Former Director of AI at Tesla",
+    "title_zh": "Tesla 前 AI 主管",
+    "quote_en": "AI is the new frontier of software.",
+    "quote_zh": "AI 是軟體的新前沿。",
+    "tags": ["AI","Innovation"],
+    "source": "AI tech quotes"
+  },
+  {
+    "author": "Tim O’Reilly",
+    "title_en": "Founder of O’Reilly Media",
+    "title_zh": "O’Reilly Media 創辦人",
+    "quote_en": "AI will create a new economy of ideas.",
+    "quote_zh": "AI 將創造一個新的理念經濟。",
+    "tags": ["AI","Economy"],
+    "source": "AI leadership quotes"
+  },
+  {
+    "author": "Hilary Mason",
+    "title_en": "Data Scientist & Founder",
+    "title_zh": "資料科學家暨創辦人",
+    "quote_en": "AI success depends on data quality.",
+    "quote_zh": "AI 的成功取決於資料品質。",
+    "tags": ["AI","Data"],
+    "source": "AI data quotes"
+  },
+  {
+    "author": "Jeff Hawkins",
+    "title_en": "Co-founder of Numenta",
+    "title_zh": "Numenta 共同創辦人",
+    "quote_en": "AI will transform how we think about intelligence.",
+    "quote_zh": "AI 將改變我們對智慧的理解方式。",
+    "tags": ["AI","Philosophy"],
+    "source": "AI perspective quotes"
+  },
+  {
+    "author": "Fei-Fei Li",
+    "title_en": "AI Researcher & Stanford Professor",
+    "title_zh": "AI 研究員暨史丹佛教授",
+    "quote_en": "We need to build AI that understands humans.",
+    "quote_zh": "我們需要建立能理解人類的 AI。",
+    "tags": ["AI","Humanity"],
+    "source": "AI research quotes"
+  },
+  {
+    "author": "Gary Marcus",
+    "title_en": "AI Researcher & Critic",
+    "title_zh": "AI 研究員與評論家",
+    "quote_en": "AI hype should match real capability.",
+    "quote_zh": "AI 的炒作應該與真正能力匹配。",
+    "tags": ["AI","Critical Thinking"],
+    "source": "AI commentary quotes"
+  },
+  {
+    "author": "Yann LeCun",
+    "title_en": "Chief AI Scientist at Meta",
+    "title_zh": "Meta AI 首席科學家",
+    "quote_en": "AI will help us understand intelligence itself.",
+    "quote_zh": "AI 將幫助我們理解智慧本身。",
+    "tags": ["AI","Vision"],
+    "source": "AI leadership quotes"
+  },
+  {
+    "author": "Oren Etzioni",
+    "title_en": "CEO of AI2",
+    "title_zh": "AI2 執行長",
+    "quote_en": "AI should be developed to augment human abilities.",
+    "quote_zh": "AI 應該被開發來增強人類能力。",
+    "tags": ["AI","Purpose"],
+    "source": "AI quotes"
+  },
+  {
+    "author": "Ilya Sutskever",
+    "title_en": "Chief Scientist at OpenAI",
+    "title_zh": "OpenAI 科學長",
+    "quote_en": "We need to be careful and responsible when building powerful AI.",
+    "quote_zh": "我們在構建強大 AI 時需要審慎且負責。",
+    "tags": ["AI","Responsibility"],
+    "source": "AI research quotes"
+  },
+  {
+    "author": "Dario Amodei",
+    "title_en": "CEO of Anthropic",
+    "title_zh": "Anthropic 執行長",
+    "quote_en": "AI systems must be aligned with human goals.",
+    "quote_zh": "AI 系統必須與人類目標一致。",
+    "tags": ["AI","Ethics"],
+    "source": "AI leadership quotes"
+  },
+  {
+    "author": "Mustafa Suleyman",
+    "title_en": "Co-founder & Head of Applied AI at DeepMind",
+    "title_zh": "DeepMind 共同創辦人暨應用 AI 負責人",
+    "quote_en": "AI safety is the foundation for future progress.",
+    "quote_zh": "AI 安全是未來進步的基礎。",
+    "tags": ["AI","Safety"],
+    "source": "AI safety quotes"
+  },
+  {
+    "author": "Richard Socher",
+    "title_en": "Chief Scientist at Salesforce",
+    "title_zh": "Salesforce 科學長",
+    "quote_en": "AI allows machines to learn from data like never before.",
+    "quote_zh": "AI 使機器能以前所未有的方式從資料中學習。",
+    "tags": ["AI","Machine Learning"],
+    "source": "AI research quotes"
+  },
+  {
+    "author": "Hilary Mason",
+    "title_en": "Data Scientist & Founder",
+    "title_zh": "資料科學家暨創辦人",
+    "quote_en": "Data is the key to AI progress.",
+    "quote_zh": "資料是 AI 進步的關鍵。",
+    "tags": ["AI","Data"],
+    "source": "AI data quotes"
+  },
+  {
+    "author": "Gary Marcus",
+    "title_en": "AI Researcher & Critic",
+    "title_zh": "AI 研究員與評論家",
+    "quote_en": "AI development must be grounded in reality.",
+    "quote_zh": "AI 的發展必須紮根於現實。",
+    "tags": ["AI","Critical Thinking"],
+    "source": "AI commentary quotes"
+  },
+  {
+    "author": "Kate Crawford",
+    "title_en": "AI Researcher & Scholar",
+    "title_zh": "AI 研究員與學者",
+    "quote_en": "AI reflects the values of those who build it.",
+    "quote_zh": "AI 反映了建立它者的價值觀。",
+    "tags": ["AI","Society","Ethics"],
+    "source": "AI cultural quotes"
+  },
+  {
+    "author": "Jeff Dean",
+    "title_en": "Head of Google AI",
+    "title_zh": "Google AI 負責人",
+    "quote_en": "AI research is about solving previously unsolvable problems.",
+    "quote_zh": "AI 研究是關於解決以前無法解決的問題。",
+    "tags": ["AI","Research"],
+    "source": "AI research quotes"
+  },
+  {
+    "author": "Francesca Rossi",
+    "title_en": "AI Ethics Global Leader at IBM",
+    "title_zh": "IBM AI 倫理全球負責人",
+    "quote_en": "AI must be developed with fairness and equity.",
+    "quote_zh": "AI 必須以公平與正義來開發。",
+    "tags": ["AI","Ethics"],
+    "source": "AI leadership quotes"
+  },
+  {
+    "author": "Patrick Collison",
+    "title_en": "CEO of Stripe",
+    "title_zh": "Stripe 執行長",
+    "quote_en": "AI will reshape the global economy.",
+    "quote_zh": "AI 將重塑全球經濟。",
+    "tags": ["AI","Economy"],
+    "source": "AI leadership quotes"
+  },
+  {
+    "author": "Reid Hoffman",
+    "title_en": "Co-founder of LinkedIn",
+    "title_zh": "LinkedIn 共同創辦人",
+    "quote_en": "AI can amplify human creativity.",
+    "quote_zh": "AI 可以放大人類的創造力。",
+    "tags": ["AI","Creativity"],
+    "source": "Tech leadership quotes"
+  },
+  {
+    "author": "Evan Spiegel",
+    "title_en": "Co-founder & CEO of Snap",
+    "title_zh": "Snap 共同創辦人暨執行長",
+    "quote_en": "AI will define future social experiences.",
+    "quote_zh": "AI 將定義未來的社交體驗。",
+    "tags": ["AI","Social"],
+    "source": "AI industry quotes"
+  },
+  {
+    "author": "Adam D’Angelo",
+    "title_en": "CEO of Quora",
+    "title_zh": "Quora 執行長",
+    "quote_en": "AI can help us extract truth from data.",
+    "quote_zh": "AI 可以幫助我們從資料中提取真相。",
+    "tags": ["AI","Data"],
+    "source": "AI leadership quotes"
+  },
+  {
+    "author": "Drew Houston",
+    "title_en": "Co-founder & CEO of Dropbox",
+    "title_zh": "Dropbox 共同創辦人暨執行長",
+    "quote_en": "AI will change how we store and use information.",
+    "quote_zh": "AI 將改變我們儲存與使用資訊的方式。",
+    "tags": ["AI","Cloud"],
+    "source": "Tech leadership quotes"
+  },
+  {
+    "author": "Ben Horowitz",
+    "title_en": "Co-founder of Andreessen Horowitz",
+    "title_zh": "Andreessen Horowitz 共同創辦人",
+    "quote_en": "Every company will become an AI company.",
+    "quote_zh": "每家公司都將成為 AI 公司。",
+    "tags": ["AI","Business"],
+    "source": "Tech leadership quotes"
+  },
+  {
+    "author": "Urs Hölzle",
+    "title_en": "Senior VP Technical Infrastructure at Google",
+    "title_zh": "Google 資深副總裁（技術基礎設施）",
+    "quote_en": "AI requires advanced infrastructure to scale.",
+    "quote_zh": "AI 需要先進的基礎設施才能擴展。",
+    "tags": ["AI","Infrastructure"],
+    "source": "AI tech quotes"
+  },
+  {
+    "author": "Adam Cheyer",
+    "title_en": "Co-founder of Siri",
+    "title_zh": "Siri 共同創辦人",
+    "quote_en": "AI assistants will redefine productivity.",
+    "quote_zh": "AI 助手將重新定義生產力。",
+    "tags": ["AI","Productivity"],
+    "source": "AI innovation quotes"
+  },
+  {
+    "author": "Robin Li",
+    "title_en": "Co-founder & CEO of Baidu",
+    "title_zh": "百度共同創辦人暨執行長",
+    "quote_en": "AI will be a core driver of future growth.",
+    "quote_zh": "AI 將是未來增長的核心驅動力。",
+    "tags": ["AI","Future","Growth"],
+    "source": "AI industry quotes"
+  },
+
+  {
+    "author": "Kirsten Brosbøl",
+    "title_en": "AI Research Advocate",
+    "title_zh": "AI 研究倡導者",
+    "quote_en": "AI should enhance human dignity.",
+    "quote_zh": "AI 應該提升人類尊嚴。",
+    "tags": ["AI","Ethics"],
+    "source": "AI ethics quotes"
+  },
+  {
+    "author": "Toby Walsh",
+    "title_en": "AI Researcher",
+    "title_zh": "AI 研究員",
+    "quote_en": "AI debate must include ethical considerations.",
+    "quote_zh": "AI 的討論必須包括倫理考量。",
+    "tags": ["AI","Ethics"],
+    "source": "AI ethics discussion"
+  },
+  {
+    "author": "Robin Li",
+    "title_en": "Co-founder & CEO of Baidu",
+    "title_zh": "百度共同創辦人暨執行長",
+    "quote_en": "AI will be a core driver of future growth.",
+    "quote_zh": "AI 將是未來增長的核心驅動力。",
+    "tags": ["AI","Future","Growth"],
+    "source": "AI industry quotes"
+  },
+  {
+    "author": "Kirsten Brosbøl",
+    "title_en": "AI Research Advocate",
+    "title_zh": "AI 研究倡導者",
+    "quote_en": "AI should enhance human dignity.",
+    "quote_zh": "AI 應該提升人類尊嚴。",
+    "tags": ["AI","Ethics"],
+    "source": "AI ethics quotes"
+  },
+  {
+    "author": "Toby Walsh",
+    "title_en": "AI Researcher",
+    "title_zh": "AI 研究員",
+    "quote_en": "AI debate must include ethical considerations.",
+    "quote_zh": "AI 的討論必須包括倫理考量。",
+    "tags": ["AI","Ethics"],
+    "source": "AI ethics discussion"
+  },
+  {
+    "author": "Daniel Kahneman",
+    "title_en": "Psychologist & Nobel Laureate",
+    "title_zh": "心理學家暨諾貝爾獎得主",
+    "quote_en": "AI may outperform humans at tasks, but human judgment still matters.",
+    "quote_zh": "AI 可能在任務上勝過人類，但人的判斷仍然重要。",
+    "tags": ["AI","Humanity"],
+    "source": "AI leadership quotes"
+  },
+  {
+    "author": "Sherry Turkle",
+    "title_en": "Professor at MIT",
+    "title_zh": "麻省理工學院教授",
+    "quote_en": "AI challenges us to rethink what it means to be human.",
+    "quote_zh": "AI 挑戰我們重新思考成為人的意義。",
+    "tags": ["AI","Philosophy"],
+    "source": "AI social quotes"
+  },
+  {
+    "author": "Kai-Fu Lee",
+    "title_en": "CEO of Sinovation Ventures",
+    "title_zh": "創新工場執行長",
+    "quote_en": "AI will create unprecedented opportunities but also deep challenges.",
+    "quote_zh": "AI 將創造前所未有的機會，也帶來深刻挑戰。",
+    "tags": ["AI","Future"],
+    "source": "AI leadership quotes"
+  },
+  {
+    "author": "Fei-Fei Li",
+    "title_en": "AI Researcher & Stanford Professor",
+    "title_zh": "AI 研究員暨史丹佛教授",
+    "quote_en": "We must build AI that respects human values.",
+    "quote_zh": "我們必須建立尊重人類價值觀的 AI。",
+    "tags": ["AI","Ethics"],
+    "source": "AI research quotes"
+  },
+  {
+    "author": "Ray Kurzweil",
+    "title_en": "Futurist & AI Inventor",
+    "title_zh": "未來學家暨 AI 發明家",
+    "quote_en": "The singularity is near, and AI will expand human potential.",
+    "quote_zh": "奇點將至，AI 將擴大人類潛能。",
+    "tags": ["AI","Future"],
+    "source": "AI futurism quotes"
+  },
+  {
+    "author": "Melanie Mitchell",
+    "title_en": "Professor of Computer Science",
+    "title_zh": "電腦科學教授",
+    "quote_en": "Understanding AI limitations is as important as celebrating its successes.",
+    "quote_zh": "了解 AI 的限制與慶祝它的成功一樣重要。",
+    "tags": ["AI","Critical Thinking"],
+    "source": "AI research quotes"
+  },
+  {
+    "author": "Pedro Domingos",
+    "title_en": "Professor at University of Washington",
+    "title_zh": "華盛頓大學教授",
+    "quote_en": "AI is the ultimate generalization of algorithms.",
+    "quote_zh": "AI 是演算法的終極泛化。",
+    "tags": ["AI","Theory"],
+    "source": "AI theory quotes"
+  }
+]

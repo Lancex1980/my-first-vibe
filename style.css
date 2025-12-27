@@ -719,11 +719,18 @@ body.sidebar-collapsed {
     justify-content: center;
     text-align: center;
     min-height: 250px;
+    position: relative;
 }
 
 .quote-icon {
     font-size: 3rem;
     margin-bottom: 20px;
+    filter: drop-shadow(0 0 10px rgba(0, 255, 65, 0.3));
+}
+
+.quote-content {
+    width: 100%;
+    position: relative;
 }
 
 .quote-text {
@@ -734,6 +741,17 @@ body.sidebar-collapsed {
     margin-bottom: 15px;
     padding: 0 10px;
     opacity: 0.9;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.quote-text.fade-out {
+    opacity: 0;
+    transform: translateY(-10px);
+}
+
+.quote-text.fade-in {
+    opacity: 0.9;
+    transform: translateY(0);
 }
 
 .quote-author {
@@ -741,6 +759,37 @@ body.sidebar-collapsed {
     color: #ffffff;
     font-weight: 400;
     opacity: 0.7;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    margin-bottom: 5px;
+}
+
+.quote-author.fade-out {
+    opacity: 0;
+    transform: translateY(-10px);
+}
+
+.quote-author.fade-in {
+    opacity: 0.7;
+    transform: translateY(0);
+}
+
+.quote-title {
+    font-size: 0.85rem;
+    color: #00ff41;
+    font-weight: 400;
+    opacity: 0.6;
+    text-shadow: 0 0 5px rgba(0, 255, 65, 0.3);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.quote-title.fade-out {
+    opacity: 0;
+    transform: translateY(-10px);
+}
+
+.quote-title.fade-in {
+    opacity: 0.6;
+    transform: translateY(0);
 }
 
 /* 待辦清單樣式 */

@@ -378,10 +378,14 @@ document.addEventListener('DOMContentLoaded', function() {
     loadTodos();
     loadMoods();
     fetchWeather(); // 載入天氣資料
+    loadQuotes(); // 載入名言資料
     
     // 載入儲存的主題
     const body = document.getElementById('body');
     body.classList.add(themes[currentThemeIndex].name);
+    
+    // 載入名言資料
+    loadQuotes();
     
     // 初始化拖放功能
     initDragAndDrop();
