@@ -9,7 +9,7 @@ body {
     background: #000000;
     min-height: 100vh;
     padding: 20px;
-    padding-left: 280px;
+    padding-left: 300px;
     color: #ffffff;
     position: relative;
     transition: background 0.5s ease, padding-left 0.3s ease;
@@ -24,13 +24,33 @@ body.sidebar-collapsed {
     position: fixed;
     left: 0;
     top: 0;
-    width: 260px;
+    width: 280px;
     height: 100vh;
-    background: #0a0a0a;
+    background: linear-gradient(180deg, #0a0a0a 0%, #000000 100%);
     border-right: 1px solid #333333;
+    box-shadow: 2px 0 20px rgba(0, 0, 0, 0.5);
     z-index: 999;
     transition: transform 0.3s ease;
     overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar::-webkit-scrollbar {
+    width: 6px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+    background: #000000;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background: #333333;
+    border-radius: 3px;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+    background: #00ff41;
 }
 
 .sidebar.collapsed {
@@ -41,66 +61,192 @@ body.sidebar-collapsed {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 24px 20px;
     border-bottom: 1px solid #333333;
+    background: rgba(0, 255, 65, 0.02);
+}
+
+.sidebar-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sidebar-icon {
+    font-size: 1.3rem;
+    filter: drop-shadow(0 0 8px rgba(0, 255, 65, 0.5));
 }
 
 .sidebar-header h3 {
-    font-size: 1.1rem;
+    font-size: 1.15rem;
     color: #00ff41;
     font-weight: 600;
-    text-shadow: 0 0 10px rgba(0, 255, 65, 0.5);
+    letter-spacing: 1px;
+    text-shadow: 0 0 10px rgba(0, 255, 65, 0.6);
+    margin: 0;
 }
 
 .sidebar-toggle {
-    background: transparent;
-    border: 1px solid #333333;
-    color: #ffffff;
-    width: 30px;
-    height: 30px;
-    border-radius: 4px;
+    background: rgba(0, 255, 65, 0.05);
+    border: 1px solid rgba(0, 255, 65, 0.3);
+    color: #00ff41;
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
     cursor: pointer;
-    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     transition: all 0.2s ease;
 }
 
 .sidebar-toggle:hover {
+    background: rgba(0, 255, 65, 0.1);
     border-color: #00ff41;
-    color: #00ff41;
+    box-shadow: 0 0 10px rgba(0, 255, 65, 0.3);
+    transform: scale(1.05);
+}
+
+.toggle-icon {
+    font-size: 0.85rem;
+    transition: transform 0.3s ease;
+}
+
+.sidebar.collapsed .toggle-icon {
+    transform: rotate(180deg);
 }
 
 .sidebar-content {
-    padding: 15px;
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
-.module-toggle-item {
-    margin-bottom: 10px;
+.module-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 0;
 }
 
-.module-toggle-item label {
+.module-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.module-item {
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid #333333;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.module-item:hover {
+    background: rgba(0, 255, 65, 0.05);
+    border-color: rgba(0, 255, 65, 0.4);
+    transform: translateX(3px);
+    box-shadow: 0 0 15px rgba(0, 255, 65, 0.2);
+}
+
+.module-label {
     display: flex;
     align-items: center;
-    gap: 10px;
-    padding: 12px;
+    gap: 12px;
+    padding: 16px;
     cursor: pointer;
-    border-radius: 6px;
+    width: 100%;
     transition: all 0.2s ease;
-    color: #ffffff;
 }
 
-.module-toggle-item label:hover {
-    background: rgba(0, 255, 65, 0.05);
+.module-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex: 1;
 }
 
-.module-toggle-item input[type="checkbox"] {
-    width: 18px;
-    height: 18px;
-    cursor: pointer;
-    accent-color: #00ff41;
+.module-icon {
+    font-size: 1.3rem;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    filter: drop-shadow(0 0 5px rgba(0, 255, 65, 0.3));
 }
 
-.module-toggle-item span {
+.module-name {
     font-size: 0.95rem;
+    color: #ffffff;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+/* 自訂 Checkbox 樣式 */
+.custom-checkbox {
+    position: relative;
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
+}
+
+.custom-checkbox input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    z-index: 1;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 22px;
+    height: 22px;
+    background: rgba(0, 0, 0, 0.5);
+    border: 2px solid #333333;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.custom-checkbox input[type="checkbox"]:checked ~ .checkmark {
+    background: rgba(0, 255, 65, 0.2);
+    border-color: #00ff41;
+    box-shadow: 0 0 10px rgba(0, 255, 65, 0.4);
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+    left: 7px;
+    top: 3px;
+    width: 5px;
+    height: 10px;
+    border: solid #00ff41;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    filter: drop-shadow(0 0 3px rgba(0, 255, 65, 0.8));
+}
+
+.custom-checkbox input[type="checkbox"]:checked ~ .checkmark:after {
+    display: block;
+}
+
+.module-item:hover .checkmark {
+    border-color: rgba(0, 255, 65, 0.6);
+}
+
+.module-item input[type="checkbox"]:checked ~ .module-info .module-name {
+    color: #00ff41;
+    text-shadow: 0 0 8px rgba(0, 255, 65, 0.5);
 }
 
 /* 背景顏色切換按鈕 */
@@ -723,15 +869,25 @@ body.sidebar-collapsed {
     }
 
     .sidebar {
+        width: 260px;
         transform: translateX(-100%);
     }
 
     .sidebar:not(.collapsed) {
         transform: translateX(0);
+        box-shadow: 2px 0 30px rgba(0, 0, 0, 0.8);
     }
 
     body.sidebar-collapsed {
         padding-left: 20px;
+    }
+
+    .sidebar-header {
+        padding: 20px 16px;
+    }
+
+    .module-label {
+        padding: 14px;
     }
 }
 

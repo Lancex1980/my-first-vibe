@@ -15,39 +15,76 @@
     <!-- 左側選單 -->
     <div class="sidebar" id="sidebar">
         <div class="sidebar-header">
-            <h3>模塊設定 ⚙️</h3>
-            <button class="sidebar-toggle" onclick="toggleSidebar()" title="收合選單">◀</button>
+            <div class="sidebar-title">
+                <span class="sidebar-icon">⚙️</span>
+                <h3>模塊設定</h3>
+            </div>
+            <button class="sidebar-toggle" onclick="toggleSidebar()" title="收合選單">
+                <span class="toggle-icon">◀</span>
+            </button>
         </div>
         <div class="sidebar-content">
-            <div class="module-toggle-item">
-                <label>
-                    <input type="checkbox" data-module="weather" checked onchange="toggleModule('weather', this.checked)">
-                    <span>即時天氣</span>
-                </label>
-            </div>
-            <div class="module-toggle-item">
-                <label>
-                    <input type="checkbox" data-module="clock" checked onchange="toggleModule('clock', this.checked)">
-                    <span>時鐘</span>
-                </label>
-            </div>
-            <div class="module-toggle-item">
-                <label>
-                    <input type="checkbox" data-module="quote" checked onchange="toggleModule('quote', this.checked)">
-                    <span>名言</span>
-                </label>
-            </div>
-            <div class="module-toggle-item">
-                <label>
-                    <input type="checkbox" data-module="todo" checked onchange="toggleModule('todo', this.checked)">
-                    <span>待辦清單</span>
-                </label>
-            </div>
-            <div class="module-toggle-item">
-                <label>
-                    <input type="checkbox" data-module="mood" checked onchange="toggleModule('mood', this.checked)">
-                    <span>心情紀錄</span>
-                </label>
+            <div class="module-list">
+                <div class="module-item" data-module="weather">
+                    <label class="module-label">
+                        <div class="custom-checkbox">
+                            <input type="checkbox" data-module="weather" checked onchange="toggleModule('weather', this.checked)">
+                            <span class="checkmark"></span>
+                        </div>
+                        <div class="module-info">
+                            <span class="module-icon">🌡️</span>
+                            <span class="module-name">即時天氣</span>
+                        </div>
+                    </label>
+                </div>
+                <div class="module-item" data-module="clock">
+                    <label class="module-label">
+                        <div class="custom-checkbox">
+                            <input type="checkbox" data-module="clock" checked onchange="toggleModule('clock', this.checked)">
+                            <span class="checkmark"></span>
+                        </div>
+                        <div class="module-info">
+                            <span class="module-icon">🕐</span>
+                            <span class="module-name">時鐘</span>
+                        </div>
+                    </label>
+                </div>
+                <div class="module-item" data-module="quote">
+                    <label class="module-label">
+                        <div class="custom-checkbox">
+                            <input type="checkbox" data-module="quote" checked onchange="toggleModule('quote', this.checked)">
+                            <span class="checkmark"></span>
+                        </div>
+                        <div class="module-info">
+                            <span class="module-icon">💫</span>
+                            <span class="module-name">名言</span>
+                        </div>
+                    </label>
+                </div>
+                <div class="module-item" data-module="todo">
+                    <label class="module-label">
+                        <div class="custom-checkbox">
+                            <input type="checkbox" data-module="todo" checked onchange="toggleModule('todo', this.checked)">
+                            <span class="checkmark"></span>
+                        </div>
+                        <div class="module-info">
+                            <span class="module-icon">🔥</span>
+                            <span class="module-name">待辦清單</span>
+                        </div>
+                    </label>
+                </div>
+                <div class="module-item" data-module="mood">
+                    <label class="module-label">
+                        <div class="custom-checkbox">
+                            <input type="checkbox" data-module="mood" checked onchange="toggleModule('mood', this.checked)">
+                            <span class="checkmark"></span>
+                        </div>
+                        <div class="module-info">
+                            <span class="module-icon">💚</span>
+                            <span class="module-name">心情紀錄</span>
+                        </div>
+                    </label>
+                </div>
             </div>
         </div>
     </div>
