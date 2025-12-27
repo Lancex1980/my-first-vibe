@@ -1,0 +1,305 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Microsoft JhengHei', '微軟正黑體', Arial, sans-serif;
+    background: #000000;
+    min-height: 100vh;
+    padding: 20px;
+    color: #ffffff;
+    position: relative;
+    transition: background 0.5s ease;
+}
+
+/* 背景顏色切換按鈕 */
+.theme-toggle-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid #333333;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.theme-toggle-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: #555555;
+    transform: scale(1.1);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    padding: 20px;
+}
+
+.card {
+    background: #000000;
+    border: 1px solid #333333;
+    border-radius: 8px;
+    padding: 30px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    border-color: #555555;
+}
+
+/* 時鐘樣式 */
+.clock-card {
+    text-align: center;
+}
+
+.clock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.time {
+    font-size: 4rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 20px;
+    letter-spacing: 6px;
+    font-family: 'Orbitron', 'Courier New', monospace;
+    font-variant-numeric: tabular-nums;
+    word-break: keep-all;
+    overflow-wrap: normal;
+}
+
+.date {
+    font-size: 1.5rem;
+    color: #ffffff;
+    font-weight: 400;
+    letter-spacing: 2px;
+    opacity: 0.8;
+}
+
+/* 名言樣式 */
+.quote-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 250px;
+}
+
+.quote-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.quote-text {
+    font-size: 1.3rem;
+    line-height: 1.8;
+    color: #ffffff;
+    font-style: italic;
+    margin-bottom: 15px;
+    padding: 0 10px;
+    opacity: 0.9;
+}
+
+.quote-author {
+    font-size: 1rem;
+    color: #ffffff;
+    font-weight: 400;
+    opacity: 0.7;
+}
+
+/* 待辦清單樣式 */
+.todo-card {
+    min-height: 400px;
+}
+
+.card-title {
+    font-size: 1.8rem;
+    color: #ffffff;
+    margin-bottom: 25px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.todo-input-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.todo-input {
+    flex: 1;
+    padding: 12px 18px;
+    background: #000000;
+    border: 1px solid #333333;
+    border-radius: 6px;
+    font-size: 1rem;
+    color: #ffffff;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.todo-input::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.todo-input:focus {
+    border-color: #555555;
+    background: #0a0a0a;
+}
+
+.add-btn {
+    padding: 12px 25px;
+    background: #000000;
+    color: #ffffff;
+    border: 1px solid #333333;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.add-btn:hover {
+    background: #0a0a0a;
+    border-color: #555555;
+}
+
+.add-btn:active {
+    transform: scale(0.98);
+}
+
+.todo-list {
+    list-style: none;
+}
+
+.todo-item {
+    background: #0a0a0a;
+    border: 1px solid #333333;
+    padding: 15px 18px;
+    margin-bottom: 12px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: all 0.3s ease;
+    animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.todo-item:hover {
+    background: #111111;
+    border-color: #555555;
+    transform: translateX(3px);
+}
+
+.todo-item.completed {
+    opacity: 0.5;
+}
+
+.todo-item.completed .todo-text {
+    text-decoration: line-through;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.todo-checkbox {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    accent-color: #ffffff;
+}
+
+.todo-text {
+    flex: 1;
+    font-size: 1rem;
+    color: #ffffff;
+}
+
+.delete-btn {
+    background: #000000;
+    color: #ffffff;
+    border: 1px solid #333333;
+    border-radius: 6px;
+    padding: 6px 12px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    opacity: 0.7;
+}
+
+.delete-btn:hover {
+    background: #1a1a1a;
+    border-color: #555555;
+    opacity: 1;
+}
+
+/* 響應式設計 */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+
+    .time {
+        font-size: 2.5rem;
+        letter-spacing: 4px;
+    }
+
+    .quote-text {
+        font-size: 1.1rem;
+    }
+
+    .theme-toggle-btn {
+        top: 10px;
+        right: 10px;
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+}
+
+/* 背景顏色主題 */
+body.theme-cyberpunk {
+    background: #000000;
+}
+
+body.theme-purple {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+body.theme-blue {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+}
+
+body.theme-red {
+    background: linear-gradient(135deg, #c94b4b 0%, #4b134f 100%);
+}
+
+body.theme-green {
+    background: linear-gradient(135deg, #134e5e 0%, #71b280 100%);
+}
+

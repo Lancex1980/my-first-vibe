@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>個人儀表板</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="body">
+    <button class="theme-toggle-btn" onclick="toggleBackground()" title="切換背景顏色">🎨</button>
+    <div class="container">
+        <!-- 時鐘區塊 -->
+        <div class="card clock-card">
+            <div class="clock">
+                <div class="time" id="time">00:00:00</div>
+                <div class="date" id="date">2024年1月1日 星期一</div>
+            </div>
+        </div>
+
+        <!-- 名言區塊 -->
+        <div class="card quote-card">
+            <div class="quote-icon">💫</div>
+            <p class="quote-text" id="quote">「成功不是終點，失敗也不是致命的，繼續前進的勇氣才是最重要的。」</p>
+            <p class="quote-author">— 溫斯頓·邱吉爾</p>
+        </div>
+
+        <!-- 待辦清單區塊 -->
+        <div class="card todo-card">
+            <h2 class="card-title">今日待辦 🔥</h2>
+            <div class="todo-input-container">
+                <input 
+                    type="text" 
+                    id="todoInput" 
+                    class="todo-input" 
+                    placeholder="新增待辦事項..."
+                    onkeypress="if(event.key === 'Enter') addTodo()"
+                >
+                <button class="add-btn" onclick="addTodo()">新增</button>
+            </div>
+            <ul class="todo-list" id="todoList">
+                <!-- 待辦事項會動態加入這裡 -->
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
