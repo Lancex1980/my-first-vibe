@@ -10,8 +10,6 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body id="body">
-    <button class="theme-toggle-btn" onclick="toggleBackground()" title="切換背景顏色">🎨</button>
-    
     <!-- 展開選單按鈕（收起時顯示） -->
     <button class="sidebar-expand-btn" id="sidebarExpandBtn" onclick="toggleSidebar()" title="展開選單" style="display: none;">
         <span>⚙️</span>
@@ -91,6 +89,13 @@
                     </label>
                 </div>
             </div>
+            
+            <!-- 主題切換按鈕 -->
+            <div class="sidebar-divider"></div>
+            <button class="theme-toggle-btn" onclick="toggleBackground()" title="切換背景顏色">
+                <span class="theme-icon">🎨</span>
+                <span class="theme-text">切換主題</span>
+            </button>
         </div>
     </div>
     
