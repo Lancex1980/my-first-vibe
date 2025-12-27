@@ -332,10 +332,18 @@ function loadModuleVisibility() {
 // 側邊欄收合功能
 function toggleSidebar() {
     const sidebar = document.getElementById('sidebar');
+    const expandBtn = document.getElementById('sidebarExpandBtn');
     const body = document.body;
     
     sidebar.classList.toggle('collapsed');
     body.classList.toggle('sidebar-collapsed');
+    
+    // 根據選單狀態顯示/隱藏展開按鈕
+    if (sidebar.classList.contains('collapsed')) {
+        expandBtn.style.display = 'flex';
+    } else {
+        expandBtn.style.display = 'none';
+    }
     
     // 儲存側邊欄狀態
     localStorage.setItem('sidebarCollapsed', sidebar.classList.contains('collapsed'));
@@ -344,11 +352,16 @@ function toggleSidebar() {
 // 載入側邊欄狀態
 function loadSidebarState() {
     const isCollapsed = localStorage.getItem('sidebarCollapsed') === 'true';
+    const sidebar = document.getElementById('sidebar');
+    const expandBtn = document.getElementById('sidebarExpandBtn');
+    const body = document.body;
+    
     if (isCollapsed) {
-        const sidebar = document.getElementById('sidebar');
-        const body = document.body;
         sidebar.classList.add('collapsed');
         body.classList.add('sidebar-collapsed');
+        expandBtn.style.display = 'flex';
+    } else {
+        expandBtn.style.display = 'none';
     }
 }
 
