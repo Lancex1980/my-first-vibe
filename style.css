@@ -358,8 +358,9 @@ body.sidebar-collapsed {
     box-shadow: 0 0 15px rgba(0, 255, 65, 0.5);
 }
 
-.card.hidden {
-    display: none;
+.card.hidden,
+.draggable-card.hidden {
+    display: none !important;
 }
 
 /* 天氣卡片樣式 */

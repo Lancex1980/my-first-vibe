@@ -299,8 +299,8 @@ function loadCardOrder() {
 
 // 模塊顯示/隱藏功能
 function toggleModule(moduleId, isVisible) {
-    const card = document.querySelector(`[data-module="${moduleId}"]`);
-    const checkbox = document.querySelector(`input[data-module="${moduleId}"]`);
+    // 使用更精確的選擇器，確保找到正確的卡片
+    const card = document.querySelector(`.draggable-card[data-module="${moduleId}"]`);
     
     if (card) {
         if (isVisible) {
@@ -308,6 +308,8 @@ function toggleModule(moduleId, isVisible) {
         } else {
             card.classList.add('hidden');
         }
+    } else {
+        console.warn(`找不到模塊: ${moduleId}`);
     }
     
     // 儲存顯示狀態
@@ -319,12 +321,18 @@ function toggleModule(moduleId, isVisible) {
 // 載入模塊顯示狀態
 function loadModuleVisibility() {
     const visibility = JSON.parse(localStorage.getItem('moduleVisibility')) || {};
+    const allModules = ['weather', 'clock', 'quote', 'todo', 'mood'];
     
-    Object.keys(visibility).forEach(moduleId => {
+    // 處理所有模塊
+    allModules.forEach(moduleId => {
         const checkbox = document.querySelector(`input[data-module="${moduleId}"]`);
-        if (checkbox) {
-            checkbox.checked = visibility[moduleId];
-            toggleModule(moduleId, visibility[moduleId]);
+        const card = document.querySelector(`.draggable-card[data-module="${moduleId}"]`);
+        
+        if (checkbox && card) {
+            // 如果有儲存的狀態，使用儲存的狀態；否則預設為顯示（checked）
+            const isVisible = visibility.hasOwnProperty(moduleId) ? visibility[moduleId] : true;
+            checkbox.checked = isVisible;
+            toggleModule(moduleId, isVisible);
         }
     });
 }
