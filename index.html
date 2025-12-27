@@ -11,9 +11,50 @@
 </head>
 <body id="body">
     <button class="theme-toggle-btn" onclick="toggleBackground()" title="切換背景顏色">🎨</button>
-    <div class="container">
+    
+    <!-- 左側選單 -->
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h3>模塊設定 ⚙️</h3>
+            <button class="sidebar-toggle" onclick="toggleSidebar()" title="收合選單">◀</button>
+        </div>
+        <div class="sidebar-content">
+            <div class="module-toggle-item">
+                <label>
+                    <input type="checkbox" data-module="weather" checked onchange="toggleModule('weather', this.checked)">
+                    <span>即時天氣</span>
+                </label>
+            </div>
+            <div class="module-toggle-item">
+                <label>
+                    <input type="checkbox" data-module="clock" checked onchange="toggleModule('clock', this.checked)">
+                    <span>時鐘</span>
+                </label>
+            </div>
+            <div class="module-toggle-item">
+                <label>
+                    <input type="checkbox" data-module="quote" checked onchange="toggleModule('quote', this.checked)">
+                    <span>名言</span>
+                </label>
+            </div>
+            <div class="module-toggle-item">
+                <label>
+                    <input type="checkbox" data-module="todo" checked onchange="toggleModule('todo', this.checked)">
+                    <span>待辦清單</span>
+                </label>
+            </div>
+            <div class="module-toggle-item">
+                <label>
+                    <input type="checkbox" data-module="mood" checked onchange="toggleModule('mood', this.checked)">
+                    <span>心情紀錄</span>
+                </label>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container" id="container">
         <!-- 天氣卡片 -->
-        <div class="card weather-card" id="weatherCard">
+        <div class="card weather-card draggable-card" id="weatherCard" data-module="weather" draggable="true">
             <div class="weather-header">
                 <h2 class="weather-title">即時天氣 🌡️</h2>
                 <div class="weather-location">📍 台北</div>
@@ -62,7 +103,7 @@
         </div>
         
         <!-- 時鐘區塊 -->
-        <div class="card clock-card">
+        <div class="card clock-card draggable-card" data-module="clock" draggable="true">
             <div class="clock">
                 <div class="time" id="time">00:00:00</div>
                 <div class="date" id="date">2024年1月1日 星期一</div>
@@ -70,14 +111,14 @@
         </div>
 
         <!-- 名言區塊 -->
-        <div class="card quote-card">
+        <div class="card quote-card draggable-card" data-module="quote" draggable="true">
             <div class="quote-icon">💫</div>
             <p class="quote-text" id="quote">「成功不是終點，失敗也不是致命的，繼續前進的勇氣才是最重要的。」</p>
             <p class="quote-author">— 溫斯頓·邱吉爾</p>
         </div>
 
         <!-- 待辦清單區塊 -->
-        <div class="card todo-card">
+        <div class="card todo-card draggable-card" data-module="todo" draggable="true">
             <h2 class="card-title">今日待辦 🔥</h2>
             <div class="todo-input-container">
                 <input 
@@ -95,7 +136,7 @@
         </div>
 
         <!-- 心情紀錄區塊 -->
-        <div class="card mood-card">
+        <div class="card mood-card draggable-card" data-module="mood" draggable="true">
             <h2 class="card-title">心情紀錄區 💚</h2>
             <div class="mood-input-container">
                 <input 

@@ -176,6 +176,182 @@ function saveTodos() {
     localStorage.setItem('todos', JSON.stringify(todos));
 }
 
+// 拖放功能
+let draggedElement = null;
+let draggedOverElement = null;
+
+// 初始化拖放功能
+function initDragAndDrop() {
+    const cards = document.querySelectorAll('.draggable-card');
+    
+    cards.forEach(card => {
+        card.addEventListener('dragstart', handleDragStart);
+        card.addEventListener('dragend', handleDragEnd);
+        card.addEventListener('dragover', handleDragOver);
+        card.addEventListener('dragenter', handleDragEnter);
+        card.addEventListener('dragleave', handleDragLeave);
+        card.addEventListener('drop', handleDrop);
+    });
+}
+
+function handleDragStart(e) {
+    draggedElement = this;
+    this.classList.add('dragging');
+    e.dataTransfer.effectAllowed = 'move';
+    e.dataTransfer.setData('text/html', this.innerHTML);
+}
+
+function handleDragEnd(e) {
+    this.classList.remove('dragging');
+    
+    const cards = document.querySelectorAll('.draggable-card');
+    cards.forEach(card => {
+        card.classList.remove('drag-over');
+    });
+    
+    draggedElement = null;
+    draggedOverElement = null;
+}
+
+function handleDragOver(e) {
+    if (e.preventDefault) {
+        e.preventDefault();
+    }
+    e.dataTransfer.dropEffect = 'move';
+    return false;
+}
+
+function handleDragEnter(e) {
+    if (this !== draggedElement) {
+        this.classList.add('drag-over');
+        draggedOverElement = this;
+    }
+}
+
+function handleDragLeave(e) {
+    this.classList.remove('drag-over');
+}
+
+function handleDrop(e) {
+    if (e.stopPropagation) {
+        e.stopPropagation();
+    }
+    
+    if (draggedElement !== this) {
+        const container = document.getElementById('container');
+        const allCards = Array.from(container.querySelectorAll('.draggable-card:not(.hidden)'));
+        const draggedIndex = allCards.indexOf(draggedElement);
+        const targetIndex = allCards.indexOf(this);
+        
+        if (draggedIndex !== -1 && targetIndex !== -1) {
+            if (draggedIndex < targetIndex) {
+                container.insertBefore(draggedElement, this.nextSibling);
+            } else {
+                container.insertBefore(draggedElement, this);
+            }
+            
+            saveCardOrder();
+        }
+    }
+    
+    this.classList.remove('drag-over');
+    return false;
+}
+
+// 儲存卡片順序
+function saveCardOrder() {
+    const container = document.getElementById('container');
+    const cards = Array.from(container.querySelectorAll('.draggable-card:not(.hidden)'));
+    const order = cards.map(card => card.dataset.module);
+    localStorage.setItem('cardOrder', JSON.stringify(order));
+}
+
+// 載入卡片順序
+function loadCardOrder() {
+    const savedOrder = JSON.parse(localStorage.getItem('cardOrder'));
+    if (!savedOrder) return;
+    
+    const container = document.getElementById('container');
+    const cards = Array.from(container.querySelectorAll('.draggable-card'));
+    const cardMap = new Map();
+    cards.forEach(card => {
+        cardMap.set(card.dataset.module, card);
+    });
+    
+    // 先移除所有卡片
+    cards.forEach(card => card.remove());
+    
+    // 按照儲存的順序重新加入
+    savedOrder.forEach(moduleId => {
+        const card = cardMap.get(moduleId);
+        if (card) {
+            container.appendChild(card);
+        }
+    });
+    
+    // 加入未在順序中的卡片（新加入的模塊）
+    cards.forEach(card => {
+        if (!savedOrder.includes(card.dataset.module)) {
+            container.appendChild(card);
+        }
+    });
+}
+
+// 模塊顯示/隱藏功能
+function toggleModule(moduleId, isVisible) {
+    const card = document.querySelector(`[data-module="${moduleId}"]`);
+    const checkbox = document.querySelector(`input[data-module="${moduleId}"]`);
+    
+    if (card) {
+        if (isVisible) {
+            card.classList.remove('hidden');
+        } else {
+            card.classList.add('hidden');
+        }
+    }
+    
+    // 儲存顯示狀態
+    const visibility = JSON.parse(localStorage.getItem('moduleVisibility')) || {};
+    visibility[moduleId] = isVisible;
+    localStorage.setItem('moduleVisibility', JSON.stringify(visibility));
+}
+
+// 載入模塊顯示狀態
+function loadModuleVisibility() {
+    const visibility = JSON.parse(localStorage.getItem('moduleVisibility')) || {};
+    
+    Object.keys(visibility).forEach(moduleId => {
+        const checkbox = document.querySelector(`input[data-module="${moduleId}"]`);
+        if (checkbox) {
+            checkbox.checked = visibility[moduleId];
+            toggleModule(moduleId, visibility[moduleId]);
+        }
+    });
+}
+
+// 側邊欄收合功能
+function toggleSidebar() {
+    const sidebar = document.getElementById('sidebar');
+    const body = document.body;
+    
+    sidebar.classList.toggle('collapsed');
+    body.classList.toggle('sidebar-collapsed');
+    
+    // 儲存側邊欄狀態
+    localStorage.setItem('sidebarCollapsed', sidebar.classList.contains('collapsed'));
+}
+
+// 載入側邊欄狀態
+function loadSidebarState() {
+    const isCollapsed = localStorage.getItem('sidebarCollapsed') === 'true';
+    if (isCollapsed) {
+        const sidebar = document.getElementById('sidebar');
+        const body = document.body;
+        sidebar.classList.add('collapsed');
+        body.classList.add('sidebar-collapsed');
+    }
+}
+
 // 頁面載入時執行 - 確保 DOM 已載入
 document.addEventListener('DOMContentLoaded', function() {
     loadTodos();
@@ -185,6 +361,14 @@ document.addEventListener('DOMContentLoaded', function() {
     // 載入儲存的主題
     const body = document.getElementById('body');
     body.classList.add(themes[currentThemeIndex].name);
+    
+    // 初始化拖放功能
+    initDragAndDrop();
+    
+    // 載入卡片順序和顯示狀態
+    loadCardOrder();
+    loadModuleVisibility();
+    loadSidebarState();
 });
 
 // 心情紀錄功能
